@@ -30,7 +30,6 @@ class WebsitesNotifySubscribers extends Command
         $this->info('Search all the unsent posts...');
 
         $unsentPosts = Post::where('sent', false)->with('website')->cursor();
-        $unsentPosts = Post::with('website')->cursor();
 
         $processed = 0;
         foreach ($unsentPosts as $post) {

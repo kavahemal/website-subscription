@@ -42,6 +42,6 @@ class SendPostNotifications implements ShouldQueue
                 }
             });
 
-        // $this->post->update(['sent' => true, 'sent_at' => now()]);
+        $this->post->update(['sent' => true, 'sent_at' => now()]);
     }
 }
