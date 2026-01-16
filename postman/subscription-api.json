@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "53ecd791-f29d-47e8-b8c0-662aa320501c",
+    "name": "Website subscription",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9351542"
+  },
+  "item": [
+    {
+      "name": "Get Websites",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/websites",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "websites"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Subscribers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/subscribers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "subscribers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add New Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "website_id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "title",
+              "value": "What Is Meant By Lorem Ipsum In Website?",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "The word Lorem Ipsum is derived from the Latin word which means “pain itself”. It is a kind of a text filler tool that is used by the webmaster on the website.\nBasically, this tool is used to create dummy content on the website when it’s new.",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/posts",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Subscribe Website",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Hemal",
+              "type": "text",
+              "uuid": "fa7fa6b9-dabc-4d12-80be-e801d1761af7"
+            },
+            {
+              "key": "email",
+              "value": "test@test.com",
+              "type": "text",
+              "uuid": "6c6997d7-a229-46e5-81f2-b3b32600e2e2"
+            },
+            {
+              "key": "website_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "d8c95acb-b1c1-4db0-be2e-9b98bd78bd8a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/subscribe",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "subscribe"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
